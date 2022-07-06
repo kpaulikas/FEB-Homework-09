@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #262427;
+    font-family: Verdana;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 1fr;
+    height: 100vh;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    max-width: 100px;
+}
+
+header h2 {
+    font-size: 1em;
+    color: #cc9965;
+    margin-top: 15px;
+}
+
+header p {
+    font-size: 0.62em;
+    color: #a8a7a9;
+}
+
+/* H2 .date */
+.date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #f4eade;
+    background-image: url(https://europe.wordcamp.org/2017/files/2017/01/background-pattern-01.png);
+    background-size: 25%;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #404040;
+}
+
+/* Main */
+main {
+    background: white;
+    padding: 10px 20px;
+    color: #404040;
+}
+
+main div {
+    background: white;
+    padding: 20px 10px;
+    border-bottom: 1px dashed black;
+}
+
+main div h3 {
+    font-size: 0.8em;
+}
+
+main div .guest {
+    font-size: 0.6em;
+    padding-top: 7px;
+}
+
+main div .time {
+    font-size: 0.5em;
+    font-weight: bold;
+    padding-top: 7px;
+}
+
+main div:last-child {
+    border: none;
+}
+
+/* Nav */
+nav a {
+    text-decoration: none;
+    font-size: 0.8em;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+nav a:nth-of-type(1) li {
+    color: black;
+    font-weight: bold;
+}
+
+nav a li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 30px;
+}
+
+nav a:nth-of-type(1) li {
+    background-color: #f1e4d5;
+}
+
+nav a:nth-of-type(2) li {
+    background-color: #e7ab47;
+}
+
+nav a:nth-of-type(3) li {
+    background-color: #68470c;
+}
+
+nav a:nth-of-type(4) li {
+    background-color: #cc9965;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+footer h4 {
+    color: white;
+    font-weight: normal;
+    font-size: 0.8em;
+    padding-bottom: 20px;
+}
+
+footer i {
+    color: white;
+    font-size: 0.5em;
+    line-height: 10px;
+}
+
+/* Media */
+@media (min-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .date {
+        grid-column: span 2;
+        grid-row: 1;
+    }
+    
+    header {
+        grid-column: 2;
+        grid-row: 2;
+        min-height: 270px;
+        transform: translateY(-40px);
+    }
+
+    main {
+        grid-column: 1;
+        grid-row: span 3;
+    }
+
+    nav {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    footer {
+        grid-row: 5;
+    }
+}
+
+@media (min-width: 1000px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .date {
+        grid-column: span 4;
+        grid-row: 1;
+        font-size: 140%;
+    }
+
+    header {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        font-size: 110%;
+        transform: translateY(-25px);
+    }
+
+    header img {
+        max-width: 120px;
+    }
+
+    main {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        font-size: 130%;
+    }
+
+    nav {
+        grid-column-start: 3;
+        font-size: 130%;
+    }
+
+    nav a:first-child li{
+        padding: 40px;
+    }
+    
+    nav a:last-child li{
+        padding: 40px;
+    }
+
+    footer {
+        grid-column-start: 4;
+        grid-row: 3;
+        font-size: 150%;
+    }
+
+    footer i {
+        line-height: 15px;
+    }
+
+}
